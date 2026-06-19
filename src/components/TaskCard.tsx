@@ -118,6 +118,10 @@ export function TaskCard({ task, onClick, onArchive }: TaskCardProps) {
             </p>
           )}
 
+          <div style={{ marginBottom: '0.625rem' }}>
+            <ProgressBar progress={task.progress} showLabel />
+          </div>
+
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '0.5rem' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', fontSize: '0.75rem', color: '#7c83a0' }}>
               {task.attachments.length > 0 && (
